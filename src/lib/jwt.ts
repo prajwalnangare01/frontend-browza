@@ -2,7 +2,7 @@ import { SignJWT, jwtVerify } from 'jose';
 
 // Secret key for JWT signing - in production, use an environment variable
 const SECRET_KEY = new TextEncoder().encode(
-  process.env.JWT_SECRET || 'your-secret-key-change-in-production-min-32-chars'
+  process.env.JWT_SECRET || 'frontendbrowza'
 );
 
 // Token expiration time (24 hours)

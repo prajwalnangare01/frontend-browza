@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
-
-export function middleware(req: NextRequest) {
-  const token = req.cookies.get("auth-token")?.value;
-
-  if (!token) {
-    return NextResponse.redirect(new URL("/login", req.url));
-  }
-
-  return NextResponse.next();
-}
-
-export const config = {
-  matcher: ["/dashboard/:path*"],
-};
-=======
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { verifyToken } from '@/lib/jwt';
@@ -65,4 +47,3 @@ export const config = {
   matcher: '/dashboard/:path*',
 };
 
->>>>>>> 451689dd034250e99ab690166c87f1a66b2a3c2a
